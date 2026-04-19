@@ -123,7 +123,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const accuracy = total === 0 ? 0 : Math.round((state.correct / total) * 100);
         
         progressBar.style.width = `${accuracy}%`;
-        accuracyText.textContent = `Precisão: ${accuracy}% (${total} questões)`;
+        accuracyText.textContent = `Precisão: ${accuracy}%`;
+        const totalDisplay = document.getElementById('totalQuestions');
+        if (totalDisplay) totalDisplay.textContent = ` (${total} questões)`;
 
         // Update Partials
         partialsList.innerHTML = '';

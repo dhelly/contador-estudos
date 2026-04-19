@@ -249,10 +249,13 @@ header p {
     transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#accuracyText {
+#accuracyContainer {
     text-align: center;
     font-size: 0.9rem;
     color: var(--text-secondary);
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 /* Buttons */
@@ -443,5 +446,16 @@ header p {
 
     .stats {
         margin-bottom: 1rem;
+    }
+
+    #accuracyContainer {
+        display: flex;
+        justify-content: center;
+        gap: 0.25rem;
+        font-size: 0.8rem;
+    }
+
+    .hide-compact {
+        display: none;
     }
 }
