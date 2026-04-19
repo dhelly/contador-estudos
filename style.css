@@ -373,3 +373,75 @@ header p {
         font-size: 2.8rem;
     }
 }
+
+/* Compact Mode (Popup/Floating Window) */
+@media (max-width: 350px) {
+    .container {
+        width: 98%;
+        padding: 0.5rem 0;
+    }
+
+    header {
+        margin-bottom: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        display: none;
+    }
+
+    .dashboard {
+        gap: 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+        border-radius: 16px;
+    }
+
+    .card h2 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .timer-display {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .controls {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        border-radius: 10px;
+    }
+
+    .partials-container {
+        display: none; /* Hide parciais in compact mode to save space */
+    }
+
+    .counters {
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .count-box {
+        font-size: 1.8rem;
+    }
+
+    .label {
+        font-size: 0.75rem;
+    }
+
+    .stats {
+        margin-bottom: 1rem;
+    }
+}
