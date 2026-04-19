@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inútil.app | Contador & Cronômetro</title>
+    <meta name="description" content="Gerenciador premium de estudos com contador de questões e cronômetro integrado.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>Tools do <span class="highlight">Inútil.app</span></h1>
+            <p>Otimize seu foco e acompanhe seu progresso.</p>
+        </header>
+
+        <section class="dashboard">
+            <!-- Cronômetro Card -->
+            <div class="card timer-card">
+                <h2>Cronômetro de Estudo</h2>
+                <div class="timer-display" id="timer">00:00:00</div>
+                <div class="controls">
+                    <button id="startBtn" class="btn btn-primary">Iniciar</button>
+                    <button id="pauseBtn" class="btn btn-secondary" disabled>Pausar</button>
+                    <button id="resetTimerBtn" class="btn btn-outline">Resetar</button>
+                </div>
+                <div class="partials-container">
+                    <h3>Parciais Salvas</h3>
+                    <ul id="partialsList" class="partials-list">
+                        <!-- Parciais serão inseridas aqui -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contador Card -->
+            <div class="card counter-card">
+                <h2>Contador de Questões</h2>
+                <div class="counters">
+                    <div class="counter-item success">
+                        <span class="label">Certas</span>
+                        <div class="count-box">
+                            <span id="correctCount">0</span>
+                        </div>
+                        <button id="correctBtn" class="btn btn-success">+1 Acerto</button>
+                    </div>
+
+                    <div class="counter-item danger">
+                        <span class="label">Erradas</span>
+                        <div class="count-box">
+                            <span id="wrongCount">0</span>
+                        </div>
+                        <button id="wrongBtn" class="btn btn-danger">+1 Erro</button>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-bar">
+                        <div id="progressBar" class="progress-fill"></div>
+                    </div>
+                    <p id="accuracyText">Precisão: 0%</p>
+                </div>
+
+                <button id="resetCountersBtn" class="btn btn-outline full-width">Zerar Contadores</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
