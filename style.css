@@ -100,6 +100,7 @@ header h1 {
 header h1 .highlight {
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -331,6 +332,31 @@ header p {
 
 .full-width {
     width: 100%;
+}
+
+/* Tablet Adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 85%;
+        padding: 3rem 0;
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+
+    .card {
+        padding: 2.5rem;
+    }
+
+    .timer-display {
+        font-size: 4rem;
+    }
 }
 
 /* Mobile Adjustments */
